@@ -9,16 +9,29 @@
    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src='https://unpkg.com/babel-standalone@6/babel.min.js'></script>
+  <script type='text/babel' src="./components/Student.js"></script>
+  <script type='text/babel' src="./components/Students.js"></script>
+  <script type="text/babel" src="./components/App.js"></script>
   </head>
   <body>
     <div id="root"></div>
     <div id="root2"></div>
 
   <script type='text/babel'>
-    
-    
-    
-    </script>
+  function render() {    
+    var s =  [
+      {name:"Bob Stanley",type:"Student",phone:"333333333",address:"100 main st Austin, TX 78744",picture:"https://picsum.photos/200/300/?random"},
+      {name:"Jeb Landers",type:"Student",phone:"3356789877",address:"103 center st Austin, TX 78741",picture:"https://picsum.photos/200/300/?random"},
+      {name:"Charlie Foster",type:"Student",phone:"6543789765",address:"107 side st Austin, TX 78746",picture:"https://picsum.photos/200/300/?random"}
+    ]
+    var date =  "1/1/2018"
+    ReactDOM.render(
+      <App theStudents={s}/>,
+      document.getElementById('root')
+    );
+  }
+  render();
+  </script>
 
   </body>
 </html>
